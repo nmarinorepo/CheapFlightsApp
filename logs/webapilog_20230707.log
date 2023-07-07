@@ -1,0 +1,909 @@
+2023-07-07 13:40:41.339 +02:00 [Information] Executed DbCommand ("88"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 13:40:41.504 +02:00 [Information] Executed DbCommand ("109"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 13:40:41.592 +02:00 [Information] Executed DbCommand ("76"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 13:40:41.643 +02:00 [Information] Executed DbCommand ("44"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 13:40:41.725 +02:00 [Information] Executed DbCommand ("56"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2023-07-07 13:40:41.758 +02:00 [Information] No migrations were applied. The database is already up to date.
+2023-07-07 13:40:42.149 +02:00 [Information] Executed DbCommand ("47"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Flights] AS [f]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2023-07-07 13:40:42.498 +02:00 [Information] Now listening on: "https://localhost:5001"
+2023-07-07 13:40:42.500 +02:00 [Information] Now listening on: "http://localhost:5000"
+2023-07-07 13:40:42.511 +02:00 [Information] Application started. Press Ctrl+C to shut down.
+2023-07-07 13:40:42.514 +02:00 [Information] Hosting environment: "Development"
+2023-07-07 13:40:42.516 +02:00 [Information] Content root path: "C:\Users\n_mar\source\repos\CheapFlights\API\"
+2023-07-07 13:40:59.984 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 13:41:00.036 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 13:41:00.061 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[Core.Models.BookingRs] CreateBooking(Core.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 13:41:00.444 +02:00 [Information] Executed DbCommand ("61"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 13:41:02.711 +02:00 [Information] Executing "BadRequestObjectResult", writing value of type '"API.Helpers.Errors.ApiResponse"'.
+2023-07-07 13:41:02.753 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 2686.514ms
+2023-07-07 13:41:02.753 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 13:41:02.767 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 400 - application/json;+charset=utf-8 2787.2315ms
+2023-07-07 13:42:04.006 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 13:42:04.007 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 13:42:04.009 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[Core.Models.BookingRs] CreateBooking(Core.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 13:42:04.159 +02:00 [Information] Executed DbCommand ("105"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 13:42:07.574 +02:00 [Information] Executing "BadRequestObjectResult", writing value of type '"API.Helpers.Errors.ApiResponse"'.
+2023-07-07 13:42:07.574 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 3565.1939ms
+2023-07-07 13:42:07.574 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 13:42:07.575 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 400 - application/json;+charset=utf-8 3568.5656ms
+2023-07-07 13:42:28.041 +02:00 [Information] Executed DbCommand ("110"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 13:42:28.213 +02:00 [Information] Executed DbCommand ("115"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 13:42:28.260 +02:00 [Information] Executed DbCommand ("40"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 13:42:28.326 +02:00 [Information] Executed DbCommand ("59"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 13:42:28.410 +02:00 [Information] Executed DbCommand ("55"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2023-07-07 13:42:28.444 +02:00 [Information] No migrations were applied. The database is already up to date.
+2023-07-07 13:42:28.785 +02:00 [Information] Executed DbCommand ("39"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Flights] AS [f]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2023-07-07 13:42:29.055 +02:00 [Information] Now listening on: "https://localhost:5001"
+2023-07-07 13:42:29.057 +02:00 [Information] Now listening on: "http://localhost:5000"
+2023-07-07 13:42:29.067 +02:00 [Information] Application started. Press Ctrl+C to shut down.
+2023-07-07 13:42:29.070 +02:00 [Information] Hosting environment: "Development"
+2023-07-07 13:42:29.072 +02:00 [Information] Content root path: "C:\Users\n_mar\source\repos\CheapFlights\API\"
+2023-07-07 13:42:32.688 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 13:42:32.739 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 13:42:32.763 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[Core.Models.BookingRs] CreateBooking(Core.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 13:42:33.211 +02:00 [Information] Executed DbCommand ("141"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 13:43:05.179 +02:00 [Information] Executing "BadRequestObjectResult", writing value of type '"API.Helpers.Errors.ApiResponse"'.
+2023-07-07 13:43:05.224 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 32455.3034ms
+2023-07-07 13:43:05.225 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 13:43:05.237 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 400 - application/json;+charset=utf-8 32552.7075ms
+2023-07-07 13:43:12.351 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 13:43:12.352 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 13:43:12.353 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[Core.Models.BookingRs] CreateBooking(Core.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 13:43:12.574 +02:00 [Information] Executed DbCommand ("182"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 13:43:42.820 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 30466.6483ms
+2023-07-07 13:43:42.822 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 13:43:45.265 +02:00 [Error] Booking with children must have at least an adult
+System.Exception: Booking with children must have at least an adult
+   at Core.Utilities.CustomValidator.isValidBooking(BookingRqEntity bookingRqEntity) in C:\Users\n_mar\source\repos\CheapFlights\Core\Utilities\CustomValidator.cs:line 36
+   at Core.Implementations.BookingService.CreateBooking(BookingRq bookingRq) in C:\Users\n_mar\source\repos\CheapFlights\Core\Implementations\BookingService.cs:line 47
+   at API.Controllers.FlightsController.CreateBooking(BookingRq bookingRq) in C:\Users\n_mar\source\repos\CheapFlights\API\Controllers\FlightsController.cs:line 67
+   at lambda_method7(Closure , Object , Object[] )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at API.Helpers.Errors.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\n_mar\source\repos\CheapFlights\API\Helpers\Errors\ExceptionMiddleware.cs:line 23
+2023-07-07 13:43:45.274 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 500 - application/json 32922.3304ms
+2023-07-07 17:06:56.791 +02:00 [Information] Executed DbCommand ("73"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:06:56.918 +02:00 [Information] Executed DbCommand ("70"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 17:06:56.950 +02:00 [Information] Executed DbCommand ("28"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:06:57.105 +02:00 [Information] Executed DbCommand ("58"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [__EFMigrationsHistory] (
+    [MigrationId] nvarchar(150) NOT NULL,
+    [ProductVersion] nvarchar(32) NOT NULL,
+    CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+);"
+2023-07-07 17:06:57.158 +02:00 [Information] Executed DbCommand ("40"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:06:57.195 +02:00 [Information] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 17:06:57.240 +02:00 [Information] Executed DbCommand ("33"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2023-07-07 17:06:57.276 +02:00 [Information] Applying migration '"20230707134149_InitialCreate"'.
+2023-07-07 17:06:57.397 +02:00 [Information] Executed DbCommand ("34"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Flights] (
+    [Id] int NOT NULL IDENTITY,
+    [FlightKey] nvarchar(max) NOT NULL,
+    [FlightNumber] nvarchar(max) NOT NULL,
+    [FlightDate] datetimeoffset(7) NOT NULL,
+    [Origin] nvarchar(max) NOT NULL,
+    [Destination] nvarchar(max) NOT NULL,
+    CONSTRAINT [PK_Flights] PRIMARY KEY ([Id])
+);"
+2023-07-07 17:06:57.447 +02:00 [Information] Executed DbCommand ("46"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Paxprice] (
+    [Id] int NOT NULL IDENTITY,
+    [Type] nvarchar(3) NOT NULL,
+    [Price] decimal(18,2) NOT NULL,
+    [FlightId] int NOT NULL,
+    CONSTRAINT [PK_Paxprice] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Paxprice_Flights_FlightId] FOREIGN KEY ([FlightId]) REFERENCES [Flights] ([Id]) ON DELETE CASCADE
+);"
+2023-07-07 17:06:57.481 +02:00 [Information] Executed DbCommand ("31"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE INDEX [IX_Paxprice_FlightId] ON [Paxprice] ([FlightId]);"
+2023-07-07 17:06:57.520 +02:00 [Information] Executed DbCommand ("37"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20230707134149_InitialCreate', N'7.0.8');"
+2023-07-07 17:06:57.979 +02:00 [Information] Executed DbCommand ("56"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Flights] AS [f]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2023-07-07 17:07:39.370 +02:00 [Information] Executed DbCommand ("154"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Scale = 7) (DbType = DateTimeOffset), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Scale = 7) (DbType = DateTimeOffset), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Scale = 7) (DbType = DateTimeOffset), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Scale = 7) (DbType = DateTimeOffset), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (Scale = 7) (DbType = DateTimeOffset), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (Size = 4000), @p26='?' (Scale = 7) (DbType = DateTimeOffset), @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?' (Size = 4000), @p30='?' (Size = 4000), @p31='?' (Scale = 7) (DbType = DateTimeOffset), @p32='?' (Size = 4000), @p33='?' (Size = 4000), @p34='?' (Size = 4000), @p35='?' (Size = 4000), @p36='?' (Scale = 7) (DbType = DateTimeOffset), @p37='?' (Size = 4000), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (Size = 4000), @p41='?' (Scale = 7) (DbType = DateTimeOffset), @p42='?' (Size = 4000), @p43='?' (Size = 4000), @p44='?' (Size = 4000), @p45='?' (Size = 4000), @p46='?' (Scale = 7) (DbType = DateTimeOffset), @p47='?' (Size = 4000), @p48='?' (Size = 4000), @p49='?' (Size = 4000), @p50='?' (Size = 4000), @p51='?' (Scale = 7) (DbType = DateTimeOffset), @p52='?' (Size = 4000), @p53='?' (Size = 4000), @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?' (Scale = 7) (DbType = DateTimeOffset), @p57='?' (Size = 4000), @p58='?' (Size = 4000), @p59='?' (Size = 4000), @p60='?' (Size = 4000), @p61='?' (Scale = 7) (DbType = DateTimeOffset), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (Size = 4000), @p65='?' (Size = 4000), @p66='?' (Scale = 7) (DbType = DateTimeOffset), @p67='?' (Size = 4000), @p68='?' (Size = 4000), @p69='?' (Size = 4000), @p70='?' (Size = 4000), @p71='?' (Scale = 7) (DbType = DateTimeOffset), @p72='?' (Size = 4000), @p73='?' (Size = 4000), @p74='?' (Size = 4000), @p75='?' (Size = 4000), @p76='?' (Scale = 7) (DbType = DateTimeOffset), @p77='?' (Size = 4000), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (Size = 4000), @p81='?' (Scale = 7) (DbType = DateTimeOffset), @p82='?' (Size = 4000), @p83='?' (Size = 4000), @p84='?' (Size = 4000), @p85='?' (Size = 4000), @p86='?' (Scale = 7) (DbType = DateTimeOffset), @p87='?' (Size = 4000), @p88='?' (Size = 4000), @p89='?' (Size = 4000), @p90='?' (Size = 4000), @p91='?' (Scale = 7) (DbType = DateTimeOffset), @p92='?' (Size = 4000), @p93='?' (Size = 4000), @p94='?' (Size = 4000), @p95='?' (Size = 4000), @p96='?' (Scale = 7) (DbType = DateTimeOffset), @p97='?' (Size = 4000), @p98='?' (Size = 4000), @p99='?' (Size = 4000), @p100='?' (Size = 4000), @p101='?' (Scale = 7) (DbType = DateTimeOffset), @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?' (Size = 4000), @p105='?' (Size = 4000), @p106='?' (Scale = 7) (DbType = DateTimeOffset), @p107='?' (Size = 4000), @p108='?' (Size = 4000), @p109='?' (Size = 4000), @p110='?' (Size = 4000), @p111='?' (Scale = 7) (DbType = DateTimeOffset), @p112='?' (Size = 4000), @p113='?' (Size = 4000), @p114='?' (Size = 4000), @p115='?' (Size = 4000), @p116='?' (Scale = 7) (DbType = DateTimeOffset), @p117='?' (Size = 4000), @p118='?' (Size = 4000), @p119='?' (Size = 4000), @p120='?' (Size = 4000), @p121='?' (Scale = 7) (DbType = DateTimeOffset), @p122='?' (Size = 4000), @p123='?' (Size = 4000), @p124='?' (Size = 4000), @p125='?' (Size = 4000), @p126='?' (Scale = 7) (DbType = DateTimeOffset), @p127='?' (Size = 4000), @p128='?' (Size = 4000), @p129='?' (Size = 4000), @p130='?' (Size = 4000), @p131='?' (Scale = 7) (DbType = DateTimeOffset), @p132='?' (Size = 4000), @p133='?' (Size = 4000), @p134='?' (Size = 4000), @p135='?' (Size = 4000), @p136='?' (Scale = 7) (DbType = DateTimeOffset), @p137='?' (Size = 4000), @p138='?' (Size = 4000), @p139='?' (Size = 4000), @p140='?' (Size = 4000), @p141='?' (Scale = 7) (DbType = DateTimeOffset), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (Size = 4000), @p145='?' (Size = 4000), @p146='?' (Scale = 7) (DbType = DateTimeOffset), @p147='?' (Size = 4000), @p148='?' (Size = 4000), @p149='?' (Size = 4000), @p150='?' (Size = 4000), @p151='?' (Scale = 7) (DbType = DateTimeOffset), @p152='?' (Size = 4000), @p153='?' (Size = 4000), @p154='?' (Size = 4000), @p155='?' (Size = 4000), @p156='?' (Scale = 7) (DbType = DateTimeOffset), @p157='?' (Size = 4000), @p158='?' (Size = 4000), @p159='?' (Size = 4000), @p160='?' (Size = 4000), @p161='?' (Scale = 7) (DbType = DateTimeOffset), @p162='?' (Size = 4000), @p163='?' (Size = 4000), @p164='?' (Size = 4000), @p165='?' (Size = 4000), @p166='?' (Scale = 7) (DbType = DateTimeOffset), @p167='?' (Size = 4000), @p168='?' (Size = 4000), @p169='?' (Size = 4000), @p170='?' (Size = 4000), @p171='?' (Scale = 7) (DbType = DateTimeOffset), @p172='?' (Size = 4000), @p173='?' (Size = 4000), @p174='?' (Size = 4000), @p175='?' (Size = 4000), @p176='?' (Scale = 7) (DbType = DateTimeOffset), @p177='?' (Size = 4000), @p178='?' (Size = 4000), @p179='?' (Size = 4000), @p180='?' (Size = 4000), @p181='?' (Scale = 7) (DbType = DateTimeOffset), @p182='?' (Size = 4000), @p183='?' (Size = 4000), @p184='?' (Size = 4000), @p185='?' (Size = 4000), @p186='?' (Scale = 7) (DbType = DateTimeOffset), @p187='?' (Size = 4000), @p188='?' (Size = 4000), @p189='?' (Size = 4000), @p190='?' (Size = 4000), @p191='?' (Scale = 7) (DbType = DateTimeOffset), @p192='?' (Size = 4000), @p193='?' (Size = 4000), @p194='?' (Size = 4000), @p195='?' (Size = 4000), @p196='?' (Scale = 7) (DbType = DateTimeOffset), @p197='?' (Size = 4000), @p198='?' (Size = 4000), @p199='?' (Size = 4000), @p200='?' (Size = 4000), @p201='?' (Scale = 7) (DbType = DateTimeOffset), @p202='?' (Size = 4000), @p203='?' (Size = 4000), @p204='?' (Size = 4000), @p205='?' (Size = 4000), @p206='?' (Scale = 7) (DbType = DateTimeOffset), @p207='?' (Size = 4000), @p208='?' (Size = 4000), @p209='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Flights] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3),
+(@p20, @p21, @p22, @p23, @p24, 4),
+(@p25, @p26, @p27, @p28, @p29, 5),
+(@p30, @p31, @p32, @p33, @p34, 6),
+(@p35, @p36, @p37, @p38, @p39, 7),
+(@p40, @p41, @p42, @p43, @p44, 8),
+(@p45, @p46, @p47, @p48, @p49, 9),
+(@p50, @p51, @p52, @p53, @p54, 10),
+(@p55, @p56, @p57, @p58, @p59, 11),
+(@p60, @p61, @p62, @p63, @p64, 12),
+(@p65, @p66, @p67, @p68, @p69, 13),
+(@p70, @p71, @p72, @p73, @p74, 14),
+(@p75, @p76, @p77, @p78, @p79, 15),
+(@p80, @p81, @p82, @p83, @p84, 16),
+(@p85, @p86, @p87, @p88, @p89, 17),
+(@p90, @p91, @p92, @p93, @p94, 18),
+(@p95, @p96, @p97, @p98, @p99, 19),
+(@p100, @p101, @p102, @p103, @p104, 20),
+(@p105, @p106, @p107, @p108, @p109, 21),
+(@p110, @p111, @p112, @p113, @p114, 22),
+(@p115, @p116, @p117, @p118, @p119, 23),
+(@p120, @p121, @p122, @p123, @p124, 24),
+(@p125, @p126, @p127, @p128, @p129, 25),
+(@p130, @p131, @p132, @p133, @p134, 26),
+(@p135, @p136, @p137, @p138, @p139, 27),
+(@p140, @p141, @p142, @p143, @p144, 28),
+(@p145, @p146, @p147, @p148, @p149, 29),
+(@p150, @p151, @p152, @p153, @p154, 30),
+(@p155, @p156, @p157, @p158, @p159, 31),
+(@p160, @p161, @p162, @p163, @p164, 32),
+(@p165, @p166, @p167, @p168, @p169, 33),
+(@p170, @p171, @p172, @p173, @p174, 34),
+(@p175, @p176, @p177, @p178, @p179, 35),
+(@p180, @p181, @p182, @p183, @p184, 36),
+(@p185, @p186, @p187, @p188, @p189, 37),
+(@p190, @p191, @p192, @p193, @p194, 38),
+(@p195, @p196, @p197, @p198, @p199, 39),
+(@p200, @p201, @p202, @p203, @p204, 40),
+(@p205, @p206, @p207, @p208, @p209, 41)) AS i ([Destination], [FlightDate], [FlightKey], [FlightNumber], [Origin], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Destination], [FlightDate], [FlightKey], [FlightNumber], [Origin])
+VALUES (i.[Destination], i.[FlightDate], i.[FlightKey], i.[FlightNumber], i.[Origin])
+OUTPUT INSERTED.[Id], i._Position;"
+2023-07-07 17:07:39.440 +02:00 [Information] Executed DbCommand ("32"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Scale = 7) (DbType = DateTimeOffset), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Scale = 7) (DbType = DateTimeOffset), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Scale = 7) (DbType = DateTimeOffset), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Scale = 7) (DbType = DateTimeOffset), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (Scale = 7) (DbType = DateTimeOffset), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (Size = 4000), @p26='?' (Scale = 7) (DbType = DateTimeOffset), @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?' (Size = 4000), @p30='?' (Size = 4000), @p31='?' (Scale = 7) (DbType = DateTimeOffset), @p32='?' (Size = 4000), @p33='?' (Size = 4000), @p34='?' (Size = 4000), @p35='?' (Size = 4000), @p36='?' (Scale = 7) (DbType = DateTimeOffset), @p37='?' (Size = 4000), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (Size = 4000), @p41='?' (Scale = 7) (DbType = DateTimeOffset), @p42='?' (Size = 4000), @p43='?' (Size = 4000), @p44='?' (Size = 4000), @p45='?' (Size = 4000), @p46='?' (Scale = 7) (DbType = DateTimeOffset), @p47='?' (Size = 4000), @p48='?' (Size = 4000), @p49='?' (Size = 4000), @p50='?' (Size = 4000), @p51='?' (Scale = 7) (DbType = DateTimeOffset), @p52='?' (Size = 4000), @p53='?' (Size = 4000), @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?' (Scale = 7) (DbType = DateTimeOffset), @p57='?' (Size = 4000), @p58='?' (Size = 4000), @p59='?' (Size = 4000), @p60='?' (Size = 4000), @p61='?' (Scale = 7) (DbType = DateTimeOffset), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (Size = 4000), @p65='?' (Size = 4000), @p66='?' (Scale = 7) (DbType = DateTimeOffset), @p67='?' (Size = 4000), @p68='?' (Size = 4000), @p69='?' (Size = 4000), @p70='?' (Size = 4000), @p71='?' (Scale = 7) (DbType = DateTimeOffset), @p72='?' (Size = 4000), @p73='?' (Size = 4000), @p74='?' (Size = 4000), @p75='?' (Size = 4000), @p76='?' (Scale = 7) (DbType = DateTimeOffset), @p77='?' (Size = 4000), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (Size = 4000), @p81='?' (Scale = 7) (DbType = DateTimeOffset), @p82='?' (Size = 4000), @p83='?' (Size = 4000), @p84='?' (Size = 4000), @p85='?' (Size = 4000), @p86='?' (Scale = 7) (DbType = DateTimeOffset), @p87='?' (Size = 4000), @p88='?' (Size = 4000), @p89='?' (Size = 4000), @p90='?' (Size = 4000), @p91='?' (Scale = 7) (DbType = DateTimeOffset), @p92='?' (Size = 4000), @p93='?' (Size = 4000), @p94='?' (Size = 4000), @p95='?' (Size = 4000), @p96='?' (Scale = 7) (DbType = DateTimeOffset), @p97='?' (Size = 4000), @p98='?' (Size = 4000), @p99='?' (Size = 4000), @p100='?' (Size = 4000), @p101='?' (Scale = 7) (DbType = DateTimeOffset), @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?' (Size = 4000), @p105='?' (Size = 4000), @p106='?' (Scale = 7) (DbType = DateTimeOffset), @p107='?' (Size = 4000), @p108='?' (Size = 4000), @p109='?' (Size = 4000), @p110='?' (Size = 4000), @p111='?' (Scale = 7) (DbType = DateTimeOffset), @p112='?' (Size = 4000), @p113='?' (Size = 4000), @p114='?' (Size = 4000), @p115='?' (Size = 4000), @p116='?' (Scale = 7) (DbType = DateTimeOffset), @p117='?' (Size = 4000), @p118='?' (Size = 4000), @p119='?' (Size = 4000), @p120='?' (Size = 4000), @p121='?' (Scale = 7) (DbType = DateTimeOffset), @p122='?' (Size = 4000), @p123='?' (Size = 4000), @p124='?' (Size = 4000), @p125='?' (Size = 4000), @p126='?' (Scale = 7) (DbType = DateTimeOffset), @p127='?' (Size = 4000), @p128='?' (Size = 4000), @p129='?' (Size = 4000), @p130='?' (Size = 4000), @p131='?' (Scale = 7) (DbType = DateTimeOffset), @p132='?' (Size = 4000), @p133='?' (Size = 4000), @p134='?' (Size = 4000), @p135='?' (Size = 4000), @p136='?' (Scale = 7) (DbType = DateTimeOffset), @p137='?' (Size = 4000), @p138='?' (Size = 4000), @p139='?' (Size = 4000), @p140='?' (Size = 4000), @p141='?' (Scale = 7) (DbType = DateTimeOffset), @p142='?' (Size = 4000), @p143='?' (Size = 4000), @p144='?' (Size = 4000), @p145='?' (Size = 4000), @p146='?' (Scale = 7) (DbType = DateTimeOffset), @p147='?' (Size = 4000), @p148='?' (Size = 4000), @p149='?' (Size = 4000), @p150='?' (Size = 4000), @p151='?' (Scale = 7) (DbType = DateTimeOffset), @p152='?' (Size = 4000), @p153='?' (Size = 4000), @p154='?' (Size = 4000), @p155='?' (Size = 4000), @p156='?' (Scale = 7) (DbType = DateTimeOffset), @p157='?' (Size = 4000), @p158='?' (Size = 4000), @p159='?' (Size = 4000), @p160='?' (Size = 4000), @p161='?' (Scale = 7) (DbType = DateTimeOffset), @p162='?' (Size = 4000), @p163='?' (Size = 4000), @p164='?' (Size = 4000), @p165='?' (Size = 4000), @p166='?' (Scale = 7) (DbType = DateTimeOffset), @p167='?' (Size = 4000), @p168='?' (Size = 4000), @p169='?' (Size = 4000), @p170='?' (Size = 4000), @p171='?' (Scale = 7) (DbType = DateTimeOffset), @p172='?' (Size = 4000), @p173='?' (Size = 4000), @p174='?' (Size = 4000), @p175='?' (Size = 4000), @p176='?' (Scale = 7) (DbType = DateTimeOffset), @p177='?' (Size = 4000), @p178='?' (Size = 4000), @p179='?' (Size = 4000), @p180='?' (Size = 4000), @p181='?' (Scale = 7) (DbType = DateTimeOffset), @p182='?' (Size = 4000), @p183='?' (Size = 4000), @p184='?' (Size = 4000), @p185='?' (Size = 4000), @p186='?' (Scale = 7) (DbType = DateTimeOffset), @p187='?' (Size = 4000), @p188='?' (Size = 4000), @p189='?' (Size = 4000), @p190='?' (Size = 4000), @p191='?' (Scale = 7) (DbType = DateTimeOffset), @p192='?' (Size = 4000), @p193='?' (Size = 4000), @p194='?' (Size = 4000), @p195='?' (Size = 4000), @p196='?' (Scale = 7) (DbType = DateTimeOffset), @p197='?' (Size = 4000), @p198='?' (Size = 4000), @p199='?' (Size = 4000), @p200='?' (Size = 4000), @p201='?' (Scale = 7) (DbType = DateTimeOffset), @p202='?' (Size = 4000), @p203='?' (Size = 4000), @p204='?' (Size = 4000), @p205='?' (Size = 4000), @p206='?' (Scale = 7) (DbType = DateTimeOffset), @p207='?' (Size = 4000), @p208='?' (Size = 4000), @p209='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Flights] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3),
+(@p20, @p21, @p22, @p23, @p24, 4),
+(@p25, @p26, @p27, @p28, @p29, 5),
+(@p30, @p31, @p32, @p33, @p34, 6),
+(@p35, @p36, @p37, @p38, @p39, 7),
+(@p40, @p41, @p42, @p43, @p44, 8),
+(@p45, @p46, @p47, @p48, @p49, 9),
+(@p50, @p51, @p52, @p53, @p54, 10),
+(@p55, @p56, @p57, @p58, @p59, 11),
+(@p60, @p61, @p62, @p63, @p64, 12),
+(@p65, @p66, @p67, @p68, @p69, 13),
+(@p70, @p71, @p72, @p73, @p74, 14),
+(@p75, @p76, @p77, @p78, @p79, 15),
+(@p80, @p81, @p82, @p83, @p84, 16),
+(@p85, @p86, @p87, @p88, @p89, 17),
+(@p90, @p91, @p92, @p93, @p94, 18),
+(@p95, @p96, @p97, @p98, @p99, 19),
+(@p100, @p101, @p102, @p103, @p104, 20),
+(@p105, @p106, @p107, @p108, @p109, 21),
+(@p110, @p111, @p112, @p113, @p114, 22),
+(@p115, @p116, @p117, @p118, @p119, 23),
+(@p120, @p121, @p122, @p123, @p124, 24),
+(@p125, @p126, @p127, @p128, @p129, 25),
+(@p130, @p131, @p132, @p133, @p134, 26),
+(@p135, @p136, @p137, @p138, @p139, 27),
+(@p140, @p141, @p142, @p143, @p144, 28),
+(@p145, @p146, @p147, @p148, @p149, 29),
+(@p150, @p151, @p152, @p153, @p154, 30),
+(@p155, @p156, @p157, @p158, @p159, 31),
+(@p160, @p161, @p162, @p163, @p164, 32),
+(@p165, @p166, @p167, @p168, @p169, 33),
+(@p170, @p171, @p172, @p173, @p174, 34),
+(@p175, @p176, @p177, @p178, @p179, 35),
+(@p180, @p181, @p182, @p183, @p184, 36),
+(@p185, @p186, @p187, @p188, @p189, 37),
+(@p190, @p191, @p192, @p193, @p194, 38),
+(@p195, @p196, @p197, @p198, @p199, 39),
+(@p200, @p201, @p202, @p203, @p204, 40),
+(@p205, @p206, @p207, @p208, @p209, 41)) AS i ([Destination], [FlightDate], [FlightKey], [FlightNumber], [Origin], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Destination], [FlightDate], [FlightKey], [FlightNumber], [Origin])
+VALUES (i.[Destination], i.[FlightDate], i.[FlightKey], i.[FlightNumber], i.[Origin])
+OUTPUT INSERTED.[Id], i._Position;"
+2023-07-07 17:07:39.494 +02:00 [Information] Executed DbCommand ("46"ms) [Parameters=["@p0='?' (Size = 4000), @p1='?' (Scale = 7) (DbType = DateTimeOffset), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (Size = 4000), @p5='?' (Size = 4000), @p6='?' (Scale = 7) (DbType = DateTimeOffset), @p7='?' (Size = 4000), @p8='?' (Size = 4000), @p9='?' (Size = 4000), @p10='?' (Size = 4000), @p11='?' (Scale = 7) (DbType = DateTimeOffset), @p12='?' (Size = 4000), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (Size = 4000), @p16='?' (Scale = 7) (DbType = DateTimeOffset), @p17='?' (Size = 4000), @p18='?' (Size = 4000), @p19='?' (Size = 4000), @p20='?' (Size = 4000), @p21='?' (Scale = 7) (DbType = DateTimeOffset), @p22='?' (Size = 4000), @p23='?' (Size = 4000), @p24='?' (Size = 4000), @p25='?' (Size = 4000), @p26='?' (Scale = 7) (DbType = DateTimeOffset), @p27='?' (Size = 4000), @p28='?' (Size = 4000), @p29='?' (Size = 4000), @p30='?' (Size = 4000), @p31='?' (Scale = 7) (DbType = DateTimeOffset), @p32='?' (Size = 4000), @p33='?' (Size = 4000), @p34='?' (Size = 4000), @p35='?' (Size = 4000), @p36='?' (Scale = 7) (DbType = DateTimeOffset), @p37='?' (Size = 4000), @p38='?' (Size = 4000), @p39='?' (Size = 4000), @p40='?' (Size = 4000), @p41='?' (Scale = 7) (DbType = DateTimeOffset), @p42='?' (Size = 4000), @p43='?' (Size = 4000), @p44='?' (Size = 4000), @p45='?' (Size = 4000), @p46='?' (Scale = 7) (DbType = DateTimeOffset), @p47='?' (Size = 4000), @p48='?' (Size = 4000), @p49='?' (Size = 4000), @p50='?' (Size = 4000), @p51='?' (Scale = 7) (DbType = DateTimeOffset), @p52='?' (Size = 4000), @p53='?' (Size = 4000), @p54='?' (Size = 4000), @p55='?' (Size = 4000), @p56='?' (Scale = 7) (DbType = DateTimeOffset), @p57='?' (Size = 4000), @p58='?' (Size = 4000), @p59='?' (Size = 4000), @p60='?' (Size = 4000), @p61='?' (Scale = 7) (DbType = DateTimeOffset), @p62='?' (Size = 4000), @p63='?' (Size = 4000), @p64='?' (Size = 4000), @p65='?' (Size = 4000), @p66='?' (Scale = 7) (DbType = DateTimeOffset), @p67='?' (Size = 4000), @p68='?' (Size = 4000), @p69='?' (Size = 4000), @p70='?' (Size = 4000), @p71='?' (Scale = 7) (DbType = DateTimeOffset), @p72='?' (Size = 4000), @p73='?' (Size = 4000), @p74='?' (Size = 4000), @p75='?' (Size = 4000), @p76='?' (Scale = 7) (DbType = DateTimeOffset), @p77='?' (Size = 4000), @p78='?' (Size = 4000), @p79='?' (Size = 4000), @p80='?' (Size = 4000), @p81='?' (Scale = 7) (DbType = DateTimeOffset), @p82='?' (Size = 4000), @p83='?' (Size = 4000), @p84='?' (Size = 4000), @p85='?' (Size = 4000), @p86='?' (Scale = 7) (DbType = DateTimeOffset), @p87='?' (Size = 4000), @p88='?' (Size = 4000), @p89='?' (Size = 4000), @p90='?' (Size = 4000), @p91='?' (Scale = 7) (DbType = DateTimeOffset), @p92='?' (Size = 4000), @p93='?' (Size = 4000), @p94='?' (Size = 4000), @p95='?' (Size = 4000), @p96='?' (Scale = 7) (DbType = DateTimeOffset), @p97='?' (Size = 4000), @p98='?' (Size = 4000), @p99='?' (Size = 4000), @p100='?' (Size = 4000), @p101='?' (Scale = 7) (DbType = DateTimeOffset), @p102='?' (Size = 4000), @p103='?' (Size = 4000), @p104='?' (Size = 4000)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Flights] USING (
+VALUES (@p0, @p1, @p2, @p3, @p4, 0),
+(@p5, @p6, @p7, @p8, @p9, 1),
+(@p10, @p11, @p12, @p13, @p14, 2),
+(@p15, @p16, @p17, @p18, @p19, 3),
+(@p20, @p21, @p22, @p23, @p24, 4),
+(@p25, @p26, @p27, @p28, @p29, 5),
+(@p30, @p31, @p32, @p33, @p34, 6),
+(@p35, @p36, @p37, @p38, @p39, 7),
+(@p40, @p41, @p42, @p43, @p44, 8),
+(@p45, @p46, @p47, @p48, @p49, 9),
+(@p50, @p51, @p52, @p53, @p54, 10),
+(@p55, @p56, @p57, @p58, @p59, 11),
+(@p60, @p61, @p62, @p63, @p64, 12),
+(@p65, @p66, @p67, @p68, @p69, 13),
+(@p70, @p71, @p72, @p73, @p74, 14),
+(@p75, @p76, @p77, @p78, @p79, 15),
+(@p80, @p81, @p82, @p83, @p84, 16),
+(@p85, @p86, @p87, @p88, @p89, 17),
+(@p90, @p91, @p92, @p93, @p94, 18),
+(@p95, @p96, @p97, @p98, @p99, 19),
+(@p100, @p101, @p102, @p103, @p104, 20)) AS i ([Destination], [FlightDate], [FlightKey], [FlightNumber], [Origin], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([Destination], [FlightDate], [FlightKey], [FlightNumber], [Origin])
+VALUES (i.[Destination], i.[FlightDate], i.[FlightKey], i.[FlightNumber], i.[Origin])
+OUTPUT INSERTED.[Id], i._Position;"
+2023-07-07 17:07:39.601 +02:00 [Information] Executed DbCommand ("97"ms) [Parameters=["@p105='?' (DbType = Int32), @p106='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p107='?' (Size = 3), @p108='?' (DbType = Int32), @p109='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p110='?' (Size = 3), @p111='?' (DbType = Int32), @p112='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p113='?' (Size = 3), @p114='?' (DbType = Int32), @p115='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p116='?' (Size = 3), @p117='?' (DbType = Int32), @p118='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p119='?' (Size = 3), @p120='?' (DbType = Int32), @p121='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p122='?' (Size = 3), @p123='?' (DbType = Int32), @p124='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p125='?' (Size = 3), @p126='?' (DbType = Int32), @p127='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p128='?' (Size = 3), @p129='?' (DbType = Int32), @p130='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p131='?' (Size = 3), @p132='?' (DbType = Int32), @p133='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p134='?' (Size = 3), @p135='?' (DbType = Int32), @p136='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p137='?' (Size = 3), @p138='?' (DbType = Int32), @p139='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p140='?' (Size = 3), @p141='?' (DbType = Int32), @p142='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p143='?' (Size = 3), @p144='?' (DbType = Int32), @p145='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p146='?' (Size = 3), @p147='?' (DbType = Int32), @p148='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p149='?' (Size = 3), @p150='?' (DbType = Int32), @p151='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p152='?' (Size = 3), @p153='?' (DbType = Int32), @p154='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p155='?' (Size = 3), @p156='?' (DbType = Int32), @p157='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p158='?' (Size = 3), @p159='?' (DbType = Int32), @p160='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p161='?' (Size = 3), @p162='?' (DbType = Int32), @p163='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p164='?' (Size = 3), @p165='?' (DbType = Int32), @p166='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p167='?' (Size = 3), @p168='?' (DbType = Int32), @p169='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p170='?' (Size = 3), @p171='?' (DbType = Int32), @p172='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p173='?' (Size = 3), @p174='?' (DbType = Int32), @p175='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p176='?' (Size = 3), @p177='?' (DbType = Int32), @p178='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p179='?' (Size = 3), @p180='?' (DbType = Int32), @p181='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p182='?' (Size = 3), @p183='?' (DbType = Int32), @p184='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p185='?' (Size = 3), @p186='?' (DbType = Int32), @p187='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p188='?' (Size = 3), @p189='?' (DbType = Int32), @p190='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p191='?' (Size = 3), @p192='?' (DbType = Int32), @p193='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p194='?' (Size = 3), @p195='?' (DbType = Int32), @p196='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p197='?' (Size = 3), @p198='?' (DbType = Int32), @p199='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p200='?' (Size = 3), @p201='?' (DbType = Int32), @p202='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p203='?' (Size = 3), @p204='?' (DbType = Int32), @p205='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p206='?' (Size = 3), @p207='?' (DbType = Int32), @p208='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p209='?' (Size = 3), @p210='?' (DbType = Int32), @p211='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p212='?' (Size = 3), @p213='?' (DbType = Int32), @p214='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p215='?' (Size = 3), @p216='?' (DbType = Int32), @p217='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p218='?' (Size = 3), @p219='?' (DbType = Int32), @p220='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p221='?' (Size = 3), @p222='?' (DbType = Int32), @p223='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p224='?' (Size = 3), @p225='?' (DbType = Int32), @p226='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p227='?' (Size = 3), @p228='?' (DbType = Int32), @p229='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p230='?' (Size = 3)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Paxprice] USING (
+VALUES (@p105, @p106, @p107, 0),
+(@p108, @p109, @p110, 1),
+(@p111, @p112, @p113, 2),
+(@p114, @p115, @p116, 3),
+(@p117, @p118, @p119, 4),
+(@p120, @p121, @p122, 5),
+(@p123, @p124, @p125, 6),
+(@p126, @p127, @p128, 7),
+(@p129, @p130, @p131, 8),
+(@p132, @p133, @p134, 9),
+(@p135, @p136, @p137, 10),
+(@p138, @p139, @p140, 11),
+(@p141, @p142, @p143, 12),
+(@p144, @p145, @p146, 13),
+(@p147, @p148, @p149, 14),
+(@p150, @p151, @p152, 15),
+(@p153, @p154, @p155, 16),
+(@p156, @p157, @p158, 17),
+(@p159, @p160, @p161, 18),
+(@p162, @p163, @p164, 19),
+(@p165, @p166, @p167, 20),
+(@p168, @p169, @p170, 21),
+(@p171, @p172, @p173, 22),
+(@p174, @p175, @p176, 23),
+(@p177, @p178, @p179, 24),
+(@p180, @p181, @p182, 25),
+(@p183, @p184, @p185, 26),
+(@p186, @p187, @p188, 27),
+(@p189, @p190, @p191, 28),
+(@p192, @p193, @p194, 29),
+(@p195, @p196, @p197, 30),
+(@p198, @p199, @p200, 31),
+(@p201, @p202, @p203, 32),
+(@p204, @p205, @p206, 33),
+(@p207, @p208, @p209, 34),
+(@p210, @p211, @p212, 35),
+(@p213, @p214, @p215, 36),
+(@p216, @p217, @p218, 37),
+(@p219, @p220, @p221, 38),
+(@p222, @p223, @p224, 39),
+(@p225, @p226, @p227, 40),
+(@p228, @p229, @p230, 41)) AS i ([FlightId], [Price], [Type], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([FlightId], [Price], [Type])
+VALUES (i.[FlightId], i.[Price], i.[Type])
+OUTPUT INSERTED.[Id], i._Position;"
+2023-07-07 17:07:39.710 +02:00 [Information] Executed DbCommand ("102"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (Size = 3), @p3='?' (DbType = Int32), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (Size = 3), @p6='?' (DbType = Int32), @p7='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (DbType = Int32), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 3), @p12='?' (DbType = Int32), @p13='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p14='?' (Size = 3), @p15='?' (DbType = Int32), @p16='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p17='?' (Size = 3), @p18='?' (DbType = Int32), @p19='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p20='?' (Size = 3), @p21='?' (DbType = Int32), @p22='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p23='?' (Size = 3), @p24='?' (DbType = Int32), @p25='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p26='?' (Size = 3), @p27='?' (DbType = Int32), @p28='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p29='?' (Size = 3), @p30='?' (DbType = Int32), @p31='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p32='?' (Size = 3), @p33='?' (DbType = Int32), @p34='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p35='?' (Size = 3), @p36='?' (DbType = Int32), @p37='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p38='?' (Size = 3), @p39='?' (DbType = Int32), @p40='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p41='?' (Size = 3), @p42='?' (DbType = Int32), @p43='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p44='?' (Size = 3), @p45='?' (DbType = Int32), @p46='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p47='?' (Size = 3), @p48='?' (DbType = Int32), @p49='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p50='?' (Size = 3), @p51='?' (DbType = Int32), @p52='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p53='?' (Size = 3), @p54='?' (DbType = Int32), @p55='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p56='?' (Size = 3), @p57='?' (DbType = Int32), @p58='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p59='?' (Size = 3), @p60='?' (DbType = Int32), @p61='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p62='?' (Size = 3), @p63='?' (DbType = Int32), @p64='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p65='?' (Size = 3), @p66='?' (DbType = Int32), @p67='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p68='?' (Size = 3), @p69='?' (DbType = Int32), @p70='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p71='?' (Size = 3), @p72='?' (DbType = Int32), @p73='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p74='?' (Size = 3), @p75='?' (DbType = Int32), @p76='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p77='?' (Size = 3), @p78='?' (DbType = Int32), @p79='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p80='?' (Size = 3), @p81='?' (DbType = Int32), @p82='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p83='?' (Size = 3), @p84='?' (DbType = Int32), @p85='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p86='?' (Size = 3), @p87='?' (DbType = Int32), @p88='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p89='?' (Size = 3), @p90='?' (DbType = Int32), @p91='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p92='?' (Size = 3), @p93='?' (DbType = Int32), @p94='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p95='?' (Size = 3), @p96='?' (DbType = Int32), @p97='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p98='?' (Size = 3), @p99='?' (DbType = Int32), @p100='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p101='?' (Size = 3), @p102='?' (DbType = Int32), @p103='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p104='?' (Size = 3), @p105='?' (DbType = Int32), @p106='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p107='?' (Size = 3), @p108='?' (DbType = Int32), @p109='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p110='?' (Size = 3), @p111='?' (DbType = Int32), @p112='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p113='?' (Size = 3), @p114='?' (DbType = Int32), @p115='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p116='?' (Size = 3), @p117='?' (DbType = Int32), @p118='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p119='?' (Size = 3), @p120='?' (DbType = Int32), @p121='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p122='?' (Size = 3), @p123='?' (DbType = Int32), @p124='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p125='?' (Size = 3)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Paxprice] USING (
+VALUES (@p0, @p1, @p2, 0),
+(@p3, @p4, @p5, 1),
+(@p6, @p7, @p8, 2),
+(@p9, @p10, @p11, 3),
+(@p12, @p13, @p14, 4),
+(@p15, @p16, @p17, 5),
+(@p18, @p19, @p20, 6),
+(@p21, @p22, @p23, 7),
+(@p24, @p25, @p26, 8),
+(@p27, @p28, @p29, 9),
+(@p30, @p31, @p32, 10),
+(@p33, @p34, @p35, 11),
+(@p36, @p37, @p38, 12),
+(@p39, @p40, @p41, 13),
+(@p42, @p43, @p44, 14),
+(@p45, @p46, @p47, 15),
+(@p48, @p49, @p50, 16),
+(@p51, @p52, @p53, 17),
+(@p54, @p55, @p56, 18),
+(@p57, @p58, @p59, 19),
+(@p60, @p61, @p62, 20),
+(@p63, @p64, @p65, 21),
+(@p66, @p67, @p68, 22),
+(@p69, @p70, @p71, 23),
+(@p72, @p73, @p74, 24),
+(@p75, @p76, @p77, 25),
+(@p78, @p79, @p80, 26),
+(@p81, @p82, @p83, 27),
+(@p84, @p85, @p86, 28),
+(@p87, @p88, @p89, 29),
+(@p90, @p91, @p92, 30),
+(@p93, @p94, @p95, 31),
+(@p96, @p97, @p98, 32),
+(@p99, @p100, @p101, 33),
+(@p102, @p103, @p104, 34),
+(@p105, @p106, @p107, 35),
+(@p108, @p109, @p110, 36),
+(@p111, @p112, @p113, 37),
+(@p114, @p115, @p116, 38),
+(@p117, @p118, @p119, 39),
+(@p120, @p121, @p122, 40),
+(@p123, @p124, @p125, 41)) AS i ([FlightId], [Price], [Type], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([FlightId], [Price], [Type])
+VALUES (i.[FlightId], i.[Price], i.[Type])
+OUTPUT INSERTED.[Id], i._Position;"
+2023-07-07 17:07:39.755 +02:00 [Information] Executed DbCommand ("38"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (Size = 3), @p3='?' (DbType = Int32), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (Size = 3), @p6='?' (DbType = Int32), @p7='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (DbType = Int32), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 3), @p12='?' (DbType = Int32), @p13='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p14='?' (Size = 3), @p15='?' (DbType = Int32), @p16='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p17='?' (Size = 3), @p18='?' (DbType = Int32), @p19='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p20='?' (Size = 3), @p21='?' (DbType = Int32), @p22='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p23='?' (Size = 3), @p24='?' (DbType = Int32), @p25='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p26='?' (Size = 3), @p27='?' (DbType = Int32), @p28='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p29='?' (Size = 3), @p30='?' (DbType = Int32), @p31='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p32='?' (Size = 3), @p33='?' (DbType = Int32), @p34='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p35='?' (Size = 3), @p36='?' (DbType = Int32), @p37='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p38='?' (Size = 3), @p39='?' (DbType = Int32), @p40='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p41='?' (Size = 3), @p42='?' (DbType = Int32), @p43='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p44='?' (Size = 3), @p45='?' (DbType = Int32), @p46='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p47='?' (Size = 3), @p48='?' (DbType = Int32), @p49='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p50='?' (Size = 3), @p51='?' (DbType = Int32), @p52='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p53='?' (Size = 3), @p54='?' (DbType = Int32), @p55='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p56='?' (Size = 3), @p57='?' (DbType = Int32), @p58='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p59='?' (Size = 3), @p60='?' (DbType = Int32), @p61='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p62='?' (Size = 3), @p63='?' (DbType = Int32), @p64='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p65='?' (Size = 3), @p66='?' (DbType = Int32), @p67='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p68='?' (Size = 3), @p69='?' (DbType = Int32), @p70='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p71='?' (Size = 3), @p72='?' (DbType = Int32), @p73='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p74='?' (Size = 3), @p75='?' (DbType = Int32), @p76='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p77='?' (Size = 3), @p78='?' (DbType = Int32), @p79='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p80='?' (Size = 3), @p81='?' (DbType = Int32), @p82='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p83='?' (Size = 3), @p84='?' (DbType = Int32), @p85='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p86='?' (Size = 3), @p87='?' (DbType = Int32), @p88='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p89='?' (Size = 3), @p90='?' (DbType = Int32), @p91='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p92='?' (Size = 3), @p93='?' (DbType = Int32), @p94='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p95='?' (Size = 3), @p96='?' (DbType = Int32), @p97='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p98='?' (Size = 3), @p99='?' (DbType = Int32), @p100='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p101='?' (Size = 3), @p102='?' (DbType = Int32), @p103='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p104='?' (Size = 3), @p105='?' (DbType = Int32), @p106='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p107='?' (Size = 3), @p108='?' (DbType = Int32), @p109='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p110='?' (Size = 3), @p111='?' (DbType = Int32), @p112='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p113='?' (Size = 3), @p114='?' (DbType = Int32), @p115='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p116='?' (Size = 3), @p117='?' (DbType = Int32), @p118='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p119='?' (Size = 3), @p120='?' (DbType = Int32), @p121='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p122='?' (Size = 3), @p123='?' (DbType = Int32), @p124='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p125='?' (Size = 3)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Paxprice] USING (
+VALUES (@p0, @p1, @p2, 0),
+(@p3, @p4, @p5, 1),
+(@p6, @p7, @p8, 2),
+(@p9, @p10, @p11, 3),
+(@p12, @p13, @p14, 4),
+(@p15, @p16, @p17, 5),
+(@p18, @p19, @p20, 6),
+(@p21, @p22, @p23, 7),
+(@p24, @p25, @p26, 8),
+(@p27, @p28, @p29, 9),
+(@p30, @p31, @p32, 10),
+(@p33, @p34, @p35, 11),
+(@p36, @p37, @p38, 12),
+(@p39, @p40, @p41, 13),
+(@p42, @p43, @p44, 14),
+(@p45, @p46, @p47, 15),
+(@p48, @p49, @p50, 16),
+(@p51, @p52, @p53, 17),
+(@p54, @p55, @p56, 18),
+(@p57, @p58, @p59, 19),
+(@p60, @p61, @p62, 20),
+(@p63, @p64, @p65, 21),
+(@p66, @p67, @p68, 22),
+(@p69, @p70, @p71, 23),
+(@p72, @p73, @p74, 24),
+(@p75, @p76, @p77, 25),
+(@p78, @p79, @p80, 26),
+(@p81, @p82, @p83, 27),
+(@p84, @p85, @p86, 28),
+(@p87, @p88, @p89, 29),
+(@p90, @p91, @p92, 30),
+(@p93, @p94, @p95, 31),
+(@p96, @p97, @p98, 32),
+(@p99, @p100, @p101, 33),
+(@p102, @p103, @p104, 34),
+(@p105, @p106, @p107, 35),
+(@p108, @p109, @p110, 36),
+(@p111, @p112, @p113, 37),
+(@p114, @p115, @p116, 38),
+(@p117, @p118, @p119, 39),
+(@p120, @p121, @p122, 40),
+(@p123, @p124, @p125, 41)) AS i ([FlightId], [Price], [Type], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([FlightId], [Price], [Type])
+VALUES (i.[FlightId], i.[Price], i.[Type])
+OUTPUT INSERTED.[Id], i._Position;"
+2023-07-07 17:07:39.794 +02:00 [Information] Executed DbCommand ("31"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (Size = 3), @p3='?' (DbType = Int32), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (Size = 3), @p6='?' (DbType = Int32), @p7='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (DbType = Int32), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 3), @p12='?' (DbType = Int32), @p13='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p14='?' (Size = 3), @p15='?' (DbType = Int32), @p16='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p17='?' (Size = 3), @p18='?' (DbType = Int32), @p19='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p20='?' (Size = 3), @p21='?' (DbType = Int32), @p22='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p23='?' (Size = 3), @p24='?' (DbType = Int32), @p25='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p26='?' (Size = 3), @p27='?' (DbType = Int32), @p28='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p29='?' (Size = 3), @p30='?' (DbType = Int32), @p31='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p32='?' (Size = 3), @p33='?' (DbType = Int32), @p34='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p35='?' (Size = 3), @p36='?' (DbType = Int32), @p37='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p38='?' (Size = 3), @p39='?' (DbType = Int32), @p40='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p41='?' (Size = 3), @p42='?' (DbType = Int32), @p43='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p44='?' (Size = 3), @p45='?' (DbType = Int32), @p46='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p47='?' (Size = 3), @p48='?' (DbType = Int32), @p49='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p50='?' (Size = 3), @p51='?' (DbType = Int32), @p52='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p53='?' (Size = 3), @p54='?' (DbType = Int32), @p55='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p56='?' (Size = 3), @p57='?' (DbType = Int32), @p58='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p59='?' (Size = 3), @p60='?' (DbType = Int32), @p61='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p62='?' (Size = 3), @p63='?' (DbType = Int32), @p64='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p65='?' (Size = 3), @p66='?' (DbType = Int32), @p67='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p68='?' (Size = 3), @p69='?' (DbType = Int32), @p70='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p71='?' (Size = 3), @p72='?' (DbType = Int32), @p73='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p74='?' (Size = 3), @p75='?' (DbType = Int32), @p76='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p77='?' (Size = 3), @p78='?' (DbType = Int32), @p79='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p80='?' (Size = 3), @p81='?' (DbType = Int32), @p82='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p83='?' (Size = 3), @p84='?' (DbType = Int32), @p85='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p86='?' (Size = 3), @p87='?' (DbType = Int32), @p88='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p89='?' (Size = 3), @p90='?' (DbType = Int32), @p91='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p92='?' (Size = 3), @p93='?' (DbType = Int32), @p94='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p95='?' (Size = 3), @p96='?' (DbType = Int32), @p97='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p98='?' (Size = 3), @p99='?' (DbType = Int32), @p100='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p101='?' (Size = 3), @p102='?' (DbType = Int32), @p103='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p104='?' (Size = 3), @p105='?' (DbType = Int32), @p106='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p107='?' (Size = 3), @p108='?' (DbType = Int32), @p109='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p110='?' (Size = 3), @p111='?' (DbType = Int32), @p112='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p113='?' (Size = 3), @p114='?' (DbType = Int32), @p115='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p116='?' (Size = 3), @p117='?' (DbType = Int32), @p118='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p119='?' (Size = 3), @p120='?' (DbType = Int32), @p121='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p122='?' (Size = 3), @p123='?' (DbType = Int32), @p124='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p125='?' (Size = 3)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Paxprice] USING (
+VALUES (@p0, @p1, @p2, 0),
+(@p3, @p4, @p5, 1),
+(@p6, @p7, @p8, 2),
+(@p9, @p10, @p11, 3),
+(@p12, @p13, @p14, 4),
+(@p15, @p16, @p17, 5),
+(@p18, @p19, @p20, 6),
+(@p21, @p22, @p23, 7),
+(@p24, @p25, @p26, 8),
+(@p27, @p28, @p29, 9),
+(@p30, @p31, @p32, 10),
+(@p33, @p34, @p35, 11),
+(@p36, @p37, @p38, 12),
+(@p39, @p40, @p41, 13),
+(@p42, @p43, @p44, 14),
+(@p45, @p46, @p47, 15),
+(@p48, @p49, @p50, 16),
+(@p51, @p52, @p53, 17),
+(@p54, @p55, @p56, 18),
+(@p57, @p58, @p59, 19),
+(@p60, @p61, @p62, 20),
+(@p63, @p64, @p65, 21),
+(@p66, @p67, @p68, 22),
+(@p69, @p70, @p71, 23),
+(@p72, @p73, @p74, 24),
+(@p75, @p76, @p77, 25),
+(@p78, @p79, @p80, 26),
+(@p81, @p82, @p83, 27),
+(@p84, @p85, @p86, 28),
+(@p87, @p88, @p89, 29),
+(@p90, @p91, @p92, 30),
+(@p93, @p94, @p95, 31),
+(@p96, @p97, @p98, 32),
+(@p99, @p100, @p101, 33),
+(@p102, @p103, @p104, 34),
+(@p105, @p106, @p107, 35),
+(@p108, @p109, @p110, 36),
+(@p111, @p112, @p113, 37),
+(@p114, @p115, @p116, 38),
+(@p117, @p118, @p119, 39),
+(@p120, @p121, @p122, 40),
+(@p123, @p124, @p125, 41)) AS i ([FlightId], [Price], [Type], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([FlightId], [Price], [Type])
+VALUES (i.[FlightId], i.[Price], i.[Type])
+OUTPUT INSERTED.[Id], i._Position;"
+2023-07-07 17:07:39.835 +02:00 [Information] Executed DbCommand ("33"ms) [Parameters=["@p0='?' (DbType = Int32), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (Size = 3), @p3='?' (DbType = Int32), @p4='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p5='?' (Size = 3), @p6='?' (DbType = Int32), @p7='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p8='?' (Size = 3), @p9='?' (DbType = Int32), @p10='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p11='?' (Size = 3), @p12='?' (DbType = Int32), @p13='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p14='?' (Size = 3), @p15='?' (DbType = Int32), @p16='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p17='?' (Size = 3), @p18='?' (DbType = Int32), @p19='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p20='?' (Size = 3), @p21='?' (DbType = Int32), @p22='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p23='?' (Size = 3), @p24='?' (DbType = Int32), @p25='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p26='?' (Size = 3), @p27='?' (DbType = Int32), @p28='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p29='?' (Size = 3), @p30='?' (DbType = Int32), @p31='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p32='?' (Size = 3), @p33='?' (DbType = Int32), @p34='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p35='?' (Size = 3), @p36='?' (DbType = Int32), @p37='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p38='?' (Size = 3), @p39='?' (DbType = Int32), @p40='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p41='?' (Size = 3), @p42='?' (DbType = Int32), @p43='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p44='?' (Size = 3), @p45='?' (DbType = Int32), @p46='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p47='?' (Size = 3), @p48='?' (DbType = Int32), @p49='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p50='?' (Size = 3), @p51='?' (DbType = Int32), @p52='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p53='?' (Size = 3), @p54='?' (DbType = Int32), @p55='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p56='?' (Size = 3), @p57='?' (DbType = Int32), @p58='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p59='?' (Size = 3), @p60='?' (DbType = Int32), @p61='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p62='?' (Size = 3), @p63='?' (DbType = Int32), @p64='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p65='?' (Size = 3), @p66='?' (DbType = Int32), @p67='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p68='?' (Size = 3), @p69='?' (DbType = Int32), @p70='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p71='?' (Size = 3), @p72='?' (DbType = Int32), @p73='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p74='?' (Size = 3), @p75='?' (DbType = Int32), @p76='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p77='?' (Size = 3), @p78='?' (DbType = Int32), @p79='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p80='?' (Size = 3), @p81='?' (DbType = Int32), @p82='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p83='?' (Size = 3), @p84='?' (DbType = Int32), @p85='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p86='?' (Size = 3), @p87='?' (DbType = Int32), @p88='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p89='?' (Size = 3), @p90='?' (DbType = Int32), @p91='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p92='?' (Size = 3), @p93='?' (DbType = Int32), @p94='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p95='?' (Size = 3), @p96='?' (DbType = Int32), @p97='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p98='?' (Size = 3), @p99='?' (DbType = Int32), @p100='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p101='?' (Size = 3), @p102='?' (DbType = Int32), @p103='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p104='?' (Size = 3), @p105='?' (DbType = Int32), @p106='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p107='?' (Size = 3), @p108='?' (DbType = Int32), @p109='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p110='?' (Size = 3), @p111='?' (DbType = Int32), @p112='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p113='?' (Size = 3), @p114='?' (DbType = Int32), @p115='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p116='?' (Size = 3), @p117='?' (DbType = Int32), @p118='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p119='?' (Size = 3), @p120='?' (DbType = Int32), @p121='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p122='?' (Size = 3), @p123='?' (DbType = Int32), @p124='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p125='?' (Size = 3)"], CommandType='Text', CommandTimeout='30']"
+""SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+MERGE [Paxprice] USING (
+VALUES (@p0, @p1, @p2, 0),
+(@p3, @p4, @p5, 1),
+(@p6, @p7, @p8, 2),
+(@p9, @p10, @p11, 3),
+(@p12, @p13, @p14, 4),
+(@p15, @p16, @p17, 5),
+(@p18, @p19, @p20, 6),
+(@p21, @p22, @p23, 7),
+(@p24, @p25, @p26, 8),
+(@p27, @p28, @p29, 9),
+(@p30, @p31, @p32, 10),
+(@p33, @p34, @p35, 11),
+(@p36, @p37, @p38, 12),
+(@p39, @p40, @p41, 13),
+(@p42, @p43, @p44, 14),
+(@p45, @p46, @p47, 15),
+(@p48, @p49, @p50, 16),
+(@p51, @p52, @p53, 17),
+(@p54, @p55, @p56, 18),
+(@p57, @p58, @p59, 19),
+(@p60, @p61, @p62, 20),
+(@p63, @p64, @p65, 21),
+(@p66, @p67, @p68, 22),
+(@p69, @p70, @p71, 23),
+(@p72, @p73, @p74, 24),
+(@p75, @p76, @p77, 25),
+(@p78, @p79, @p80, 26),
+(@p81, @p82, @p83, 27),
+(@p84, @p85, @p86, 28),
+(@p87, @p88, @p89, 29),
+(@p90, @p91, @p92, 30),
+(@p93, @p94, @p95, 31),
+(@p96, @p97, @p98, 32),
+(@p99, @p100, @p101, 33),
+(@p102, @p103, @p104, 34),
+(@p105, @p106, @p107, 35),
+(@p108, @p109, @p110, 36),
+(@p111, @p112, @p113, 37),
+(@p114, @p115, @p116, 38),
+(@p117, @p118, @p119, 39),
+(@p120, @p121, @p122, 40),
+(@p123, @p124, @p125, 41)) AS i ([FlightId], [Price], [Type], _Position) ON 1=0
+WHEN NOT MATCHED THEN
+INSERT ([FlightId], [Price], [Type])
+VALUES (i.[FlightId], i.[Price], i.[Type])
+OUTPUT INSERTED.[Id], i._Position;"
+2023-07-07 17:07:47.757 +02:00 [Information] Now listening on: "https://localhost:5001"
+2023-07-07 17:07:47.760 +02:00 [Information] Now listening on: "http://localhost:5000"
+2023-07-07 17:07:47.772 +02:00 [Information] Application started. Press Ctrl+C to shut down.
+2023-07-07 17:07:47.776 +02:00 [Information] Hosting environment: "Development"
+2023-07-07 17:07:47.778 +02:00 [Information] Content root path: "C:\Users\n_mar\source\repos\CheapFlights\API\"
+2023-07-07 17:08:39.111 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/flights - -
+2023-07-07 17:08:39.168 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.Get (API)"'
+2023-07-07 17:08:39.187 +02:00 [Information] Route matched with "{action = \"Get\", controller = \"Flights\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Core.Entities.Flight]]] Get()" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:08:39.197 +02:00 [Information] Executed action "API.Controllers.FlightsController.Get (API)" in 3.6887ms
+2023-07-07 17:08:39.200 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.Get (API)"'
+2023-07-07 17:08:52.213 +02:00 [Error] Unable to resolve service for type 'Core.Interfaces.IFlightsService' while attempting to activate 'API.Controllers.FlightsController'.
+System.InvalidOperationException: Unable to resolve service for type 'Core.Interfaces.IFlightsService' while attempting to activate 'API.Controllers.FlightsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method128(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at API.Helpers.Errors.ExceptionMiddleware.InvokeAsync(HttpContext context) in C:\Users\n_mar\source\repos\CheapFlights\API\Helpers\Errors\ExceptionMiddleware.cs:line 23
+2023-07-07 17:08:52.257 +02:00 [Information] Request finished HTTP/1.1 GET https://localhost:5001/api/flights - - - 500 - application/json 13150.3568ms
+2023-07-07 17:11:58.995 +02:00 [Information] Executed DbCommand ("81"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:11:59.130 +02:00 [Information] Executed DbCommand ("77"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 17:11:59.180 +02:00 [Information] Executed DbCommand ("40"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:11:59.229 +02:00 [Information] Executed DbCommand ("40"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 17:11:59.770 +02:00 [Information] Executed DbCommand ("514"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2023-07-07 17:11:59.805 +02:00 [Information] No migrations were applied. The database is already up to date.
+2023-07-07 17:12:00.193 +02:00 [Information] Executed DbCommand ("87"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Flights] AS [f]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2023-07-07 17:12:00.538 +02:00 [Information] Now listening on: "https://localhost:5001"
+2023-07-07 17:12:00.541 +02:00 [Information] Now listening on: "http://localhost:5000"
+2023-07-07 17:12:00.550 +02:00 [Information] Application started. Press Ctrl+C to shut down.
+2023-07-07 17:12:00.553 +02:00 [Information] Hosting environment: "Development"
+2023-07-07 17:12:00.555 +02:00 [Information] Content root path: "C:\Users\n_mar\source\repos\CheapFlights\API\"
+2023-07-07 17:12:38.112 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/flights - -
+2023-07-07 17:12:38.166 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.Get (API)"'
+2023-07-07 17:12:38.184 +02:00 [Information] Route matched with "{action = \"Get\", controller = \"Flights\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CheapFlights.Domain.Entities.Flight]]] Get()" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:12:38.190 +02:00 [Information] Getting all flights...
+2023-07-07 17:12:38.648 +02:00 [Information] Executed DbCommand ("243"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:12:38.787 +02:00 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[CheapFlights.Domain.Entities.Flight, CheapFlights.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-07-07 17:12:38.910 +02:00 [Information] Executed action "API.Controllers.FlightsController.Get (API)" in 720.3829ms
+2023-07-07 17:12:38.911 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.Get (API)"'
+2023-07-07 17:12:38.925 +02:00 [Information] Request finished HTTP/1.1 GET https://localhost:5001/api/flights - - - 200 - application/json;+charset=utf-8 817.0896ms
+2023-07-07 17:12:53.988 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/GetFlights application/json 257
+2023-07-07 17:12:53.991 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.GetFlights (API)"'
+2023-07-07 17:12:54.007 +02:00 [Information] Route matched with "{action = \"GetFlights\", controller = \"Flights\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CheapFlights.Domain.Entities.Flight]]] GetFlights(CheapFlights.Application.Models.FlightsRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:12:59.803 +02:00 [Information] Executed DbCommand ("60"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:12:59.851 +02:00 [Information] Executing "NotFoundObjectResult", writing value of type '"API.Helpers.Errors.ApiResponse"'.
+2023-07-07 17:12:59.855 +02:00 [Information] Executed action "API.Controllers.FlightsController.GetFlights (API)" in 5847.8884ms
+2023-07-07 17:12:59.855 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.GetFlights (API)"'
+2023-07-07 17:12:59.856 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/GetFlights application/json 257 - 404 - application/json;+charset=utf-8 5867.9058ms
+2023-07-07 17:13:11.857 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/GetFlights application/json 257
+2023-07-07 17:13:11.859 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.GetFlights (API)"'
+2023-07-07 17:13:11.859 +02:00 [Information] Route matched with "{action = \"GetFlights\", controller = \"Flights\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CheapFlights.Domain.Entities.Flight]]] GetFlights(CheapFlights.Application.Models.FlightsRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:13:14.816 +02:00 [Information] Executed DbCommand ("39"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:13:14.820 +02:00 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[CheapFlights.Domain.Entities.Flight, CheapFlights.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-07-07 17:13:14.820 +02:00 [Information] Executed action "API.Controllers.FlightsController.GetFlights (API)" in 2960.9575ms
+2023-07-07 17:13:14.820 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.GetFlights (API)"'
+2023-07-07 17:13:14.820 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/GetFlights application/json 257 - 200 - application/json;+charset=utf-8 2963.4399ms
+2023-07-07 17:13:54.066 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 17:13:54.067 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:13:54.068 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] CreateBooking(CheapFlights.Application.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:15:50.339 +02:00 [Information] Executed DbCommand ("83"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:15:50.473 +02:00 [Information] Executed DbCommand ("76"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 17:15:50.522 +02:00 [Information] Executed DbCommand ("43"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:15:50.564 +02:00 [Information] Executed DbCommand ("40"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 17:15:50.634 +02:00 [Information] Executed DbCommand ("45"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2023-07-07 17:15:50.668 +02:00 [Information] No migrations were applied. The database is already up to date.
+2023-07-07 17:15:51.018 +02:00 [Information] Executed DbCommand ("41"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Flights] AS [f]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2023-07-07 17:15:51.287 +02:00 [Information] Now listening on: "https://localhost:5001"
+2023-07-07 17:15:51.290 +02:00 [Information] Now listening on: "http://localhost:5000"
+2023-07-07 17:15:51.299 +02:00 [Information] Application started. Press Ctrl+C to shut down.
+2023-07-07 17:15:51.302 +02:00 [Information] Hosting environment: "Development"
+2023-07-07 17:15:51.304 +02:00 [Information] Content root path: "C:\Users\n_mar\source\repos\CheapFlights\API\"
+2023-07-07 17:16:16.430 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/flights - -
+2023-07-07 17:16:16.484 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.Get (API)"'
+2023-07-07 17:16:16.503 +02:00 [Information] Route matched with "{action = \"Get\", controller = \"Flights\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CheapFlights.Domain.Entities.Flight]]] Get()" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:16:16.509 +02:00 [Information] Getting all flights...
+2023-07-07 17:16:16.751 +02:00 [Information] Executed DbCommand ("52"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:16:16.799 +02:00 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[CheapFlights.Domain.Entities.Flight, CheapFlights.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-07-07 17:16:16.921 +02:00 [Information] Executed action "API.Controllers.FlightsController.Get (API)" in 413.0613ms
+2023-07-07 17:16:16.923 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.Get (API)"'
+2023-07-07 17:16:16.938 +02:00 [Information] Request finished HTTP/1.1 GET https://localhost:5001/api/flights - - - 200 - application/json;+charset=utf-8 512.0453ms
+2023-07-07 17:16:21.735 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/GetFlights application/json 257
+2023-07-07 17:16:21.738 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.GetFlights (API)"'
+2023-07-07 17:16:21.748 +02:00 [Information] Route matched with "{action = \"GetFlights\", controller = \"Flights\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CheapFlights.Domain.Entities.Flight]]] GetFlights(CheapFlights.Application.Models.FlightsRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:16:25.296 +02:00 [Information] Executed DbCommand ("40"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:16:25.302 +02:00 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[CheapFlights.Domain.Entities.Flight, CheapFlights.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-07-07 17:16:25.302 +02:00 [Information] Executed action "API.Controllers.FlightsController.GetFlights (API)" in 3553.7193ms
+2023-07-07 17:16:25.302 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.GetFlights (API)"'
+2023-07-07 17:16:25.302 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/GetFlights application/json 257 - 200 - application/json;+charset=utf-8 3567.0801ms
+2023-07-07 17:16:31.589 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 17:16:31.591 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:16:31.592 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] CreateBooking(CheapFlights.Application.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:16:31.664 +02:00 [Information] Executed DbCommand ("53"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:16:36.182 +02:00 [Information] Executing "BadRequestObjectResult", writing value of type '"API.Helpers.Errors.ApiResponse"'.
+2023-07-07 17:16:36.187 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 4595.2088ms
+2023-07-07 17:16:36.187 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:16:36.187 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 400 - application/json;+charset=utf-8 4598.4356ms
+2023-07-07 17:16:48.222 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 17:16:48.222 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:16:48.222 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] CreateBooking(CheapFlights.Application.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:16:48.282 +02:00 [Information] Executed DbCommand ("55"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:16:51.008 +02:00 [Information] Executing "BadRequestObjectResult", writing value of type '"API.Helpers.Errors.ApiResponse"'.
+2023-07-07 17:16:51.008 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 2785.8474ms
+2023-07-07 17:16:51.008 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:16:51.009 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 400 - application/json;+charset=utf-8 2786.6614ms
+2023-07-07 17:17:07.790 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 17:17:07.791 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:17:07.791 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] CreateBooking(CheapFlights.Application.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:17:08.133 +02:00 [Information] Executed DbCommand ("339"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:17:17.202 +02:00 [Information] Executing "BadRequestObjectResult", writing value of type '"API.Helpers.Errors.ApiResponse"'.
+2023-07-07 17:17:17.204 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 9413.0128ms
+2023-07-07 17:17:17.204 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:17:17.205 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 400 - application/json;+charset=utf-8 9414.2431ms
+2023-07-07 17:17:27.594 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 17:17:27.594 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:17:27.595 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] CreateBooking(CheapFlights.Application.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:17:40.847 +02:00 [Information] Executed DbCommand ("222"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:18:10.708 +02:00 [Information] Executing "BadRequestObjectResult", writing value of type '"API.Helpers.Errors.ApiResponse"'.
+2023-07-07 17:18:10.712 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 43117.3208ms
+2023-07-07 17:18:10.712 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:18:10.716 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 400 - application/json;+charset=utf-8 43121.3059ms
+2023-07-07 17:19:43.299 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 17:19:43.299 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:19:43.299 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] CreateBooking(CheapFlights.Application.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:19:45.396 +02:00 [Information] Executed DbCommand ("114"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:19:46.816 +02:00 [Information] Executing "OkObjectResult", writing value of type '"CheapFlights.Application.Models.BookingRs"'.
+2023-07-07 17:19:46.827 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 3526.3508ms
+2023-07-07 17:19:46.827 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:19:46.827 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 200 - application/json;+charset=utf-8 3530.7510ms
+2023-07-07 17:20:06.133 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/RetrieveBooking application/json 69
+2023-07-07 17:20:06.133 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.RetrieveBooking (API)"'
+2023-07-07 17:20:06.135 +02:00 [Information] Route matched with "{action = \"RetrieveBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] RetrieveBooking(CheapFlights.Application.Models.RetrieveBookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:23:48.543 +02:00 [Information] Executed DbCommand ("79"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:23:48.682 +02:00 [Information] Executed DbCommand ("77"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 17:23:48.730 +02:00 [Information] Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:23:48.775 +02:00 [Information] Executed DbCommand ("39"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 17:23:48.859 +02:00 [Information] Executed DbCommand ("58"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2023-07-07 17:23:48.893 +02:00 [Information] No migrations were applied. The database is already up to date.
+2023-07-07 17:23:49.293 +02:00 [Information] Executed DbCommand ("41"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Flights] AS [f]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2023-07-07 17:23:49.603 +02:00 [Information] Now listening on: "https://localhost:5001"
+2023-07-07 17:23:49.607 +02:00 [Information] Now listening on: "http://localhost:5000"
+2023-07-07 17:23:49.618 +02:00 [Information] Application started. Press Ctrl+C to shut down.
+2023-07-07 17:23:49.622 +02:00 [Information] Hosting environment: "Development"
+2023-07-07 17:23:49.625 +02:00 [Information] Content root path: "C:\Users\n_mar\source\repos\CheapFlights\API\"
+2023-07-07 17:24:06.834 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/flights - -
+2023-07-07 17:24:06.892 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.Get (API)"'
+2023-07-07 17:24:06.913 +02:00 [Information] Route matched with "{action = \"Get\", controller = \"Flights\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CheapFlights.Domain.Entities.Flight]]] Get()" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:24:06.919 +02:00 [Information] Getting all flights...
+2023-07-07 17:24:07.176 +02:00 [Information] Executed DbCommand ("66"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:24:07.250 +02:00 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[CheapFlights.Domain.Entities.Flight, CheapFlights.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-07-07 17:24:07.380 +02:00 [Information] Executed action "API.Controllers.FlightsController.Get (API)" in 461.6253ms
+2023-07-07 17:24:07.381 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.Get (API)"'
+2023-07-07 17:24:07.396 +02:00 [Information] Request finished HTTP/1.1 GET https://localhost:5001/api/flights - - - 200 - application/json;+charset=utf-8 565.7184ms
+2023-07-07 17:24:13.292 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/GetFlights application/json 257
+2023-07-07 17:24:13.295 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.GetFlights (API)"'
+2023-07-07 17:24:13.307 +02:00 [Information] Route matched with "{action = \"GetFlights\", controller = \"Flights\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CheapFlights.Domain.Entities.Flight]]] GetFlights(CheapFlights.Application.Models.FlightsRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:24:13.445 +02:00 [Information] Executed DbCommand ("39"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:24:13.450 +02:00 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[CheapFlights.Domain.Entities.Flight, CheapFlights.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-07-07 17:24:13.451 +02:00 [Information] Executed action "API.Controllers.FlightsController.GetFlights (API)" in 143.1595ms
+2023-07-07 17:24:13.451 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.GetFlights (API)"'
+2023-07-07 17:24:13.451 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/GetFlights application/json 257 - 200 - application/json;+charset=utf-8 159.2396ms
+2023-07-07 17:24:25.100 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 17:24:25.102 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:24:25.103 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] CreateBooking(CheapFlights.Application.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:24:27.253 +02:00 [Information] Executed DbCommand ("39"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:24:28.590 +02:00 [Information] Executing "OkObjectResult", writing value of type '"CheapFlights.Application.Models.BookingRs"'.
+2023-07-07 17:24:28.601 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 3498.1595ms
+2023-07-07 17:24:28.601 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:24:28.602 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 200 - application/json;+charset=utf-8 3501.7312ms
+2023-07-07 17:24:44.248 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/RetrieveBooking application/json 69
+2023-07-07 17:24:44.248 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.RetrieveBooking (API)"'
+2023-07-07 17:24:44.249 +02:00 [Information] Route matched with "{action = \"RetrieveBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] RetrieveBooking(CheapFlights.Application.Models.RetrieveBookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:24:44.253 +02:00 [Information] Executing "OkObjectResult", writing value of type '"CheapFlights.Application.Models.BookingRs"'.
+2023-07-07 17:24:44.253 +02:00 [Information] Executed action "API.Controllers.FlightsController.RetrieveBooking (API)" in 3.5362ms
+2023-07-07 17:24:44.253 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.RetrieveBooking (API)"'
+2023-07-07 17:24:44.253 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/RetrieveBooking application/json 69 - 200 - application/json;+charset=utf-8 5.2959ms
+2023-07-07 17:27:28.877 +02:00 [Information] Executed DbCommand ("87"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:27:29.043 +02:00 [Information] Executed DbCommand ("90"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 17:27:29.086 +02:00 [Information] Executed DbCommand ("36"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT 1"
+2023-07-07 17:27:29.131 +02:00 [Information] Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT OBJECT_ID(N'[__EFMigrationsHistory]');"
+2023-07-07 17:27:29.201 +02:00 [Information] Executed DbCommand ("40"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];"
+2023-07-07 17:27:29.235 +02:00 [Information] No migrations were applied. The database is already up to date.
+2023-07-07 17:27:29.613 +02:00 [Information] Executed DbCommand ("38"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Flights] AS [f]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END"
+2023-07-07 17:27:29.879 +02:00 [Information] Now listening on: "https://localhost:5001"
+2023-07-07 17:27:29.882 +02:00 [Information] Now listening on: "http://localhost:5000"
+2023-07-07 17:27:29.892 +02:00 [Information] Application started. Press Ctrl+C to shut down.
+2023-07-07 17:27:29.896 +02:00 [Information] Hosting environment: "Development"
+2023-07-07 17:27:29.897 +02:00 [Information] Content root path: "C:\Users\n_mar\source\repos\CheapFlights\API\"
+2023-07-07 17:27:47.026 +02:00 [Information] Request starting HTTP/1.1 GET https://localhost:5001/api/flights - -
+2023-07-07 17:27:47.080 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.Get (API)"'
+2023-07-07 17:27:47.098 +02:00 [Information] Route matched with "{action = \"Get\", controller = \"Flights\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CheapFlights.Domain.Entities.Flight]]] Get()" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:27:47.105 +02:00 [Information] Getting all flights...
+2023-07-07 17:27:47.369 +02:00 [Information] Executed DbCommand ("72"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:27:47.416 +02:00 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[CheapFlights.Domain.Entities.Flight, CheapFlights.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-07-07 17:27:47.539 +02:00 [Information] Executed action "API.Controllers.FlightsController.Get (API)" in 436.7755ms
+2023-07-07 17:27:47.540 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.Get (API)"'
+2023-07-07 17:27:47.555 +02:00 [Information] Request finished HTTP/1.1 GET https://localhost:5001/api/flights - - - 200 - application/json;+charset=utf-8 531.9970ms
+2023-07-07 17:27:52.324 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/GetFlights application/json 257
+2023-07-07 17:27:52.327 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.GetFlights (API)"'
+2023-07-07 17:27:52.337 +02:00 [Information] Route matched with "{action = \"GetFlights\", controller = \"Flights\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[CheapFlights.Domain.Entities.Flight]]] GetFlights(CheapFlights.Application.Models.FlightsRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:27:52.506 +02:00 [Information] Executed DbCommand ("73"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:27:52.511 +02:00 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[CheapFlights.Domain.Entities.Flight, CheapFlights.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2023-07-07 17:27:52.512 +02:00 [Information] Executed action "API.Controllers.FlightsController.GetFlights (API)" in 174.9268ms
+2023-07-07 17:27:52.512 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.GetFlights (API)"'
+2023-07-07 17:27:52.512 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/GetFlights application/json 257 - 200 - application/json;+charset=utf-8 187.9532ms
+2023-07-07 17:28:01.841 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591
+2023-07-07 17:28:01.843 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:28:01.844 +02:00 [Information] Route matched with "{action = \"CreateBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] CreateBooking(CheapFlights.Application.Models.BookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:28:03.763 +02:00 [Information] Executed DbCommand ("47"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[Destination], [f].[FlightDate], [f].[FlightKey], [f].[FlightNumber], [f].[Origin], [p].[Id], [p].[FlightId], [p].[Price], [p].[Type]
+FROM [Flights] AS [f]
+LEFT JOIN [Paxprice] AS [p] ON [f].[Id] = [p].[FlightId]
+ORDER BY [f].[Id]"
+2023-07-07 17:28:04.622 +02:00 [Information] Executing "OkObjectResult", writing value of type '"CheapFlights.Application.Models.BookingRs"'.
+2023-07-07 17:28:04.633 +02:00 [Information] Executed action "API.Controllers.FlightsController.CreateBooking (API)" in 2788.465ms
+2023-07-07 17:28:04.633 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.CreateBooking (API)"'
+2023-07-07 17:28:04.633 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/CreateBooking application/json 591 - 200 - application/json;+charset=utf-8 2791.9302ms
+2023-07-07 17:28:22.874 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/RetrieveBooking application/json 69
+2023-07-07 17:28:22.874 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.RetrieveBooking (API)"'
+2023-07-07 17:28:22.875 +02:00 [Information] Route matched with "{action = \"RetrieveBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] RetrieveBooking(CheapFlights.Application.Models.RetrieveBookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:28:22.878 +02:00 [Information] Executing "OkObjectResult", writing value of type '"CheapFlights.Application.Models.BookingRs"'.
+2023-07-07 17:28:22.878 +02:00 [Information] Executed action "API.Controllers.FlightsController.RetrieveBooking (API)" in 2.6081ms
+2023-07-07 17:28:22.878 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.RetrieveBooking (API)"'
+2023-07-07 17:28:22.878 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/RetrieveBooking application/json 69 - 200 - application/json;+charset=utf-8 4.1285ms
+2023-07-07 17:28:32.965 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/RetrieveBooking application/json 63
+2023-07-07 17:28:32.965 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.RetrieveBooking (API)"'
+2023-07-07 17:28:32.965 +02:00 [Information] Route matched with "{action = \"RetrieveBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] RetrieveBooking(CheapFlights.Application.Models.RetrieveBookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:28:32.969 +02:00 [Information] Executing "BadRequestObjectResult", writing value of type '"API.Helpers.Errors.ApiValidation"'.
+2023-07-07 17:28:32.971 +02:00 [Information] Executed action "API.Controllers.FlightsController.RetrieveBooking (API)" in 5.2222ms
+2023-07-07 17:28:32.971 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.RetrieveBooking (API)"'
+2023-07-07 17:28:32.971 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/RetrieveBooking application/json 63 - 400 - application/json;+charset=utf-8 6.0335ms
+2023-07-07 17:29:21.960 +02:00 [Information] Request starting HTTP/1.1 POST https://localhost:5001/api/flights/RetrieveBooking application/json 69
+2023-07-07 17:29:21.962 +02:00 [Information] Executing endpoint '"API.Controllers.FlightsController.RetrieveBooking (API)"'
+2023-07-07 17:29:21.963 +02:00 [Information] Route matched with "{action = \"RetrieveBooking\", controller = \"Flights\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.ActionResult`1[CheapFlights.Application.Models.BookingRs] RetrieveBooking(CheapFlights.Application.Models.RetrieveBookingRq)" on controller "API.Controllers.FlightsController" ("API").
+2023-07-07 17:29:21.964 +02:00 [Information] Executing "OkObjectResult", writing value of type '"CheapFlights.Application.Models.BookingRs"'.
+2023-07-07 17:29:21.964 +02:00 [Information] Executed action "API.Controllers.FlightsController.RetrieveBooking (API)" in 1.4072ms
+2023-07-07 17:29:21.964 +02:00 [Information] Executed endpoint '"API.Controllers.FlightsController.RetrieveBooking (API)"'
+2023-07-07 17:29:21.964 +02:00 [Information] Request finished HTTP/1.1 POST https://localhost:5001/api/flights/RetrieveBooking application/json 69 - 200 - application/json;+charset=utf-8 5.5983ms
