@@ -18,14 +18,14 @@ namespace CheapFlights.Application.Implementations
 
         public void CreateBooking(BookingRqEntity bookingRs)
         {
-            var key = $"{bookingRs.BookingId}";
+            var key = $"{bookingRs.BookingId}_{bookingRs.Contact.Email}";
             _cacheRepository.CreateBooking(key, bookingRs);
         }
 
 
         public BookingRs RetrieveBooking(RetrieveBookingRq retrieveBookingRq)
         {
-            var key = $"{retrieveBookingRq.BookingId}";
+            var key = $"{retrieveBookingRq.BookingId}_{retrieveBookingRq.ContactEmail}";
             return _cacheRepository.RetrieveBooking(key);
         }
     }
